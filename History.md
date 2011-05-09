@@ -1,4 +1,62 @@
 
+0.6.1 / 2011-04-26 
+==================
+
+  * Changed; cli commands will now signal orphaned children
+  * Changed; postpone spawning until "listening" this _should_ fix our EINVAL issue
+  * Changed; exit > 0 when trying to use the `cli()` when cluster is not running
+  * Changed; `cli()` will still operate on orphans
+
+0.6.0 / 2011-04-18 
+==================
+
+  * Added support to run cluster without a server. Closes #72
+  * Renamed titles to "cluster" and "cluster worker". closes #82
+
+0.5.7 / 2011-04-17 
+==================
+
+  * Added `lightRequests` option to `stats()`
+
+0.5.6 / 2011-04-15 
+==================
+
+  * Added; expose utils, helpful for plugins
+  * Added; default both `Master#spawn()` and `Master#remove()` to 1
+
+0.5.5 / 2011-04-05 
+==================
+
+  * Revert "Changed; demote user/group in master"
+
+0.5.4 / 2011-04-05 
+==================
+
+  * Added `title` and `worker title` settings. Closes #54
+  * Added `request complete` `stats()` event
+  * Changed; demote user/group in master
+
+0.5.3 / 2011-03-30 
+==================
+
+  * Added support for changing watched file extensions [Eiríkur Nilsson]
+  * Fixed; reload() using extname() instead of indexOf() [reported by solsys]
+
+0.5.1 / 2011-03-24 
+==================
+
+  * Changed; only caught uncaughtExceptions when no other listeners are present
+
+0.5.0 / 2011-03-24 
+==================
+
+  * Added `connections` option to `stats()` plugin.
+    Reports connections and disconnections, displaying in the REPL.
+  * Added `requests` option to `stats()` plugin.
+    Reports request statistics, displaying in the REPL.
+  * Added support for plugins to work within workers. Closes #27
+  * Fixed json framing race-condition. Closes #64
+
 0.4.2 / 2011-03-15 
 ==================
 

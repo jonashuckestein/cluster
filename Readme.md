@@ -67,15 +67,23 @@ recommended usage: passing the path to prevent unnecessary database connections 
         .use(cluster.repl(8888))
         .listen(3000);
 
-# Screencasts
+## Plugins
+
+ Below are the known 3rd-party plugins for cluster:
+ 
+   - [cluster-log](https://github.com/LearnBoost/cluster-log) remove logger powered by redis
+   - [cluster-mail](https://github.com/LearnBoost/cluster-mail) email exception notifications
+   - [cluster-exception](https://github.com/3rd-eden/cluster.exception) extensive exception notifications
+
+## Screencasts
 
   - Cluster [Introduction](http://screenr.com/X8v)
 
 ## Running Tests
 
-First:
+Install development dependencies:
 
-     $ git submodule update --init
+     $ npm install
 
 Then:
 
